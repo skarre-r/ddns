@@ -1,0 +1,10 @@
+{
+    "domain1": {
+        "subdomain1": "key1",
+        "subdomain2": "key2"
+    },
+    "domain2.com": {
+        "subdomain1": "key3",
+        "subdomain2": "key4"
+    }
+}
