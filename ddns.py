@@ -25,7 +25,7 @@ def update_ddns() -> None:
                     print(f"{_domain}: updating dns record...")
                     response: requests.Response = session.get(url=url)
                     if not response:
-                        print(f'{_domain} failed to update dns record')
+                        print(f'{_domain}: failed to update dns record')
                         continue
                     print(f'{_domain}: dns record updated')
 
