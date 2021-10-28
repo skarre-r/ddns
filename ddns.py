@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import os
+import sys
 import json
 import requests
 from requests.adapters import HTTPAdapter
@@ -10,7 +12,7 @@ NJALLA_BASE_URL: str = "https://njal.la/update/"
 
 
 def update_ddns() -> None:
-    with open('conf.json', "r") as config_file:
+    with open(os.path.join(sys.path[0], 'conf.json'), "r") as config_file:
         with requests.Session() as session:
             config: dict = json.load(config_file)
             domain: str
