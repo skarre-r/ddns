@@ -16,7 +16,7 @@ def update_ddns() -> None:
         with requests.Session() as session:
             config: dict = json.load(config_file)
             domain: str
-            subdomains: str
+            subdomains: dict
             for domain, subdomains in config.items():
                 subdomain: str
                 key: str
